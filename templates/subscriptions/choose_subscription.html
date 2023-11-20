@@ -1,0 +1,11 @@
+<!-- subscriptions/templates/choose_subscription.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Choose your subscription plan:</h2>
+  <form method="post" action="{% url 'make_payment' %}">
+    {% csrf_token %}
+    <!-- Display your subscription packages with pricing options here -->
+    <button type="submit">Subscribe</button>
+  </form>
+{% endblock %}
